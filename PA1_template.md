@@ -98,8 +98,7 @@ Calculate and report the mean and median of the total number of steps taken per 
 ```
 
 ```
-## RStudioGD 
-##         2
+## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot1.png'
 ```
 
 ```r
@@ -159,8 +158,7 @@ Calculate and report the mean and median of the total number of steps taken per 
 ```
 
 ```
-## RStudioGD 
-##         2
+## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot2.png'
 ```
 
 ```r
@@ -261,8 +259,7 @@ Note that there are a number of days/intervals where there are missing values (c
 ```
 
 ```
-## RStudioGD 
-##         2
+## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot3.png'
 ```
 
 ```r
@@ -381,8 +378,7 @@ The impact is that with data imputation we have more observations in the center.
 ```
 
 ```
-## RStudioGD 
-##         2
+## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot4.png'
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-2.png) 
