@@ -76,10 +76,6 @@ Calculate and report the mean and median of the total number of steps taken per 
   
   print(p1)
   
-  png(filename = "./figures/plot1.png", width = 480, height = 480)
-  p1
-  dev.off()
-  
   
   # mean:
   print(mean(activity_summarie$SUM_STEPS))
@@ -113,12 +109,9 @@ Calculate and report the mean and median of the total number of steps taken per 
       ylab( "AVERAGE STEPS" ) +
       ggtitle( "AVERAGE DAILY ACTIVITY PATTERN" )
   
-  png(filename = "./figures/plot2.png", width = 480, height = 480)
-  p2
-  dev.off()
   
   activity_summarie2[which.max(activity_summarie2$MEAN_STEPS), ]
-  p2
+  print(p2)
 ```
 
 ## Imputing missing values
@@ -165,10 +158,6 @@ Note that there are a number of days/intervals where there are missing values (c
     xlab( "total number of steps per day" ) +
     ylab( "COUNT" ) 
   
-  png(filename = "./figures/plot3.png", width = 480, height = 480)
-  p3
-  dev.off()
-  
   
   # mean:
   print(mean(activity_summarie3$SUM_STEPS))
@@ -181,12 +170,9 @@ Note that there are a number of days/intervals where there are missing values (c
   
   
   # DIFFERENCE
-  p31 <-grid.arrange(p1, p3, ncol=2) 
-  print(p31)
+  grid.arrange(p1, p3, ncol=2) 
   
-  png(filename = "./figures/plot31.png", width = 480, height = 480)
-  p31
-  dev.off()
+
   
 ```
 
@@ -222,9 +208,6 @@ The impact is that with data imputation we have more observations in the center.
   
   print(p4)
   
-  png(filename = "./figures/plot4.png", width = 480, height = 480)
-  p4
-  dev.off()
   
   
 ```

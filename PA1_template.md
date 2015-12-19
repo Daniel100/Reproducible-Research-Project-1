@@ -85,28 +85,9 @@ Calculate and report the mean and median of the total number of steps taken per 
 ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png) 
 
 ```r
-  png(filename = "./figures/plot1.png", width = 480, height = 480)
-  p1
-```
-
-```
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
-```
-
-```r
-  dev.off()
-```
-
-```
-## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot1.png'
-```
-
-```r
   # mean:
   print(mean(activity_summarie$SUM_STEPS))
 ```
-
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-2.png) 
 
 ```
 ## [1] 10766.19
@@ -152,20 +133,9 @@ Calculate and report the mean and median of the total number of steps taken per 
       ylab( "AVERAGE STEPS" ) +
       ggtitle( "AVERAGE DAILY ACTIVITY PATTERN" )
   
-  png(filename = "./figures/plot2.png", width = 480, height = 480)
-  p2
-  dev.off()
-```
-
-```
-## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot2.png'
-```
-
-```r
+  
   activity_summarie2[which.max(activity_summarie2$MEAN_STEPS), ]
 ```
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 ```
 ##     interval MEAN_STEPS
@@ -173,10 +143,10 @@ Calculate and report the mean and median of the total number of steps taken per 
 ```
 
 ```r
-  p2
+  print(p2)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 ## Imputing missing values
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
@@ -246,28 +216,10 @@ Note that there are a number of days/intervals where there are missing values (c
     xlab( "total number of steps per day" ) +
     ylab( "COUNT" ) 
   
-  png(filename = "./figures/plot3.png", width = 480, height = 480)
-  p3
-```
-
-```
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
-```
-
-```r
-  dev.off()
-```
-
-```
-## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot3.png'
-```
-
-```r
+  
   # mean:
   print(mean(activity_summarie3$SUM_STEPS))
 ```
-
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 ```
 ## [1] 10766.19
@@ -293,7 +245,7 @@ Note that there are a number of days/intervals where there are missing values (c
 
 ```r
   # DIFFERENCE
-  p31 <-grid.arrange(p1, p3, ncol=2) 
+  grid.arrange(p1, p3, ncol=2) 
 ```
 
 ```
@@ -301,39 +253,7 @@ Note that there are a number of days/intervals where there are missing values (c
 ## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-2.png) 
-
-```r
-  print(p31)
-```
-
-```
-## TableGrob (1 x 2) "arrange": 2 grobs
-##   z     cells    name           grob
-## 1 1 (1-1,1-1) arrange gtable[layout]
-## 2 2 (1-1,2-2) arrange gtable[layout]
-```
-
-```r
-  png(filename = "./figures/plot31.png", width = 480, height = 480)
-  p31
-```
-
-```
-## TableGrob (1 x 2) "arrange": 2 grobs
-##   z     cells    name           grob
-## 1 1 (1-1,1-1) arrange gtable[layout]
-## 2 2 (1-1,2-2) arrange gtable[layout]
-```
-
-```r
-  dev.off()
-```
-
-```
-## RStudioGD 
-##         2
-```
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 The impact is that with data imputation we have more observations in the center.
 
@@ -370,18 +290,6 @@ The impact is that with data imputation we have more observations in the center.
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
-
-```r
-  png(filename = "./figures/plot4.png", width = 480, height = 480)
-  p4
-  dev.off()
-```
-
-```
-## Error in dev.off(): QuartzBitmap_Output - unable to open file './figures/plot4.png'
-```
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-2.png) 
 
 As you can see in the picture the activity patterns between weekdays and weekends is different.
 
