@@ -8,6 +8,7 @@
   library(gridExtra)
   library(lubridate)
   library(lattice)
+  library(knitr)
 
 # LOADING THR RAW_DATA ----------------------------------------------------------------------------
   if( !file.exists("RAW_DATA") ){
@@ -201,7 +202,8 @@
   p4
   dev.off()
   
-  
+
+  knit2html("PA1_template.Rmd")
   
   
   
